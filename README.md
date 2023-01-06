@@ -7,6 +7,7 @@ JavaScript Assignments
 
 - [x] Week 3
 
+We Are Here
 - [ ] Week 4
 
 - [ ] Week 5
