@@ -10,13 +10,14 @@ JavaScript Assignments
 - [x] Week 4
 
 
+
+- [x] Week 5
+
+- [x] Week 6
+
+- [x] Quarter 1 
+
 We Are Here
-
-- [ ] Week 5
-
-- [ ] Week 6
-
-- [ ] Quarter 1 
 
 - [ ] Week 7
 
