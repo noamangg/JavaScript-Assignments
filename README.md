@@ -17,11 +17,11 @@ JavaScript Assignments
 
 - [x] Quarter 1 
 
-We Are Here
+- [x] Week 7 👌
 
-- [ ] Week 7
+We Are Here 😎
 
-- [ ] Week 8
+- [ ] Week 8 
 
 - [ ] Week 9
 
