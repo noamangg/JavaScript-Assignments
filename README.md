@@ -19,13 +19,13 @@ JavaScript Assignments
 
 - [x] Week 7 👌
 
-We Are Here 😎
+- [x] Week 8 
 
-- [ ] Week 8 
-
-- [ ] Week 9
+- [x] Week 9
 
 - [ ] Week 10
+
+We Are Here 😎
 
 - [ ] Week 11
 
