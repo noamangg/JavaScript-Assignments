@@ -4,5 +4,6 @@ let yourString = myString
   .split("")
   .filter((elem, index) => elem !== myString[index + 1])
   .reduce((acc, current) => `${acc}${current}`);
-console.log(yourString);
+  
+  console.log(yourString);
 // Elzero
