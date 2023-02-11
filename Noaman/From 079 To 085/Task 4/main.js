@@ -29,7 +29,7 @@ let a = Object.values(Object.values(Object.values(myFavGames)[1])[1]);
 let b = Object.keys(myFavGames);
 console.log(a);
 console.log(b);
-// Code One => How To Get Object Length ?
+// Code One => How To Get Object Length ??
 let objectLength = Object.keys(myFavGames).length;
 
 for (let i = 0; i < objectLength; i++) {
