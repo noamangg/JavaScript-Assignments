@@ -10,9 +10,19 @@
 <body>
   
   
-  <div> </div>
+  <form action="">
+    <input type="text" name="hello" class="hello">
+    <input type="submit" value="test">
+  </form>
   
   
-  <script src="main.js"></script>
+  <script>
+    let a = document.querySelector(".hello");
+    console.log(a);
+    console.log(a.value);
+    console.log(a.textContent);
+    console.log(a.innerHTML);
+
+  </script>
 </body>
 </html>

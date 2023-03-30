@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noaman</title>
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div id="elzero" class="element" name="js">JavaScript</div>
+</body>
+<script>
+  let z = [
+    document.getElementById("elzero"),
+    document.getElementsByClassName("element")[0],
+    document.getElementsByName("js")[0],
+    document.querySelector("#elzero"),
+    document.querySelectorAll("#elzero")[0],
+    document.querySelector(".element"),
+    document.querySelectorAll(".element")[0],
+    document.querySelectorAll(`[name = "js"]`)[0],
+    document.querySelector(`[name = "js"]`),
+    document.getElementsByTagName("div")[0],
+    document.querySelectorAll("div")[0],
+    document.querySelector("div"),
+    document.body.children[0],
+    document.body.firstElementChild,
+    document.body.childNodes[1]
+  ]
+
+  for (let i = 0; i < z.length; i++) {
+    if (i === 0)
+      console.log(z.length);
+
+    console.log(z[i]);
+  }
+
+
+</script>
+
+</html>

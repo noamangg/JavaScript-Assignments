@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noaman</title>
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <form action="">
+    <input type="number" name="dollar" placeholder="USD Dollar" />
+    <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+  </form>
+</body>
+<script>
+let myForm = document.forms[0];
+let inputNum = myForm.querySelector(`[type="number"]`);
+let myDiv = myForm.children[1].textContent;
+console.log(myDiv);
+inputNum.oninput = function(e) {
+  myForm.children[1].textContent = `{${inputNum.value}} USD Dollar = ${(inputNum.value * 156.009).toFixed(2)} Egyptian Pound`;
+}
+</script>
+
+</html>
