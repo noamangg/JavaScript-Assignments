@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        let userName = window.prompt("Print Number From – To", "Example: 5-20");
+        let numbers = userName.split("-");
+        let p = document.createElement("p");
+
+        let big = +numbers[0] >= +numbers[1] ? +numbers[0]: +numbers[1];
+        let small = +numbers[0] - big === 0 ? numbers[1]:numbers[0];
+            for (let i = small; i <= big; i++)
+            {
+                p.textContent = `${i}`;
+                document.body.appendChild(p.cloneNode(true));
+            }
+    </script>
+</body>
+
+</html>

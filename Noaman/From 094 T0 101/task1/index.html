@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn JavaScript</title>
+    <script>
+      // Your Code Here
+      console.log("Hello world");
+        // Your Code Here
+        let links = document.querySelectorAll(`.open`);
+        console.log(links);
+        for (let i = 0; i < links.length; i++) {
+            console.log("Iam in 2");
+            for (j = 0; j < links[i].classList.length; j++) {
+                let classLinks = links[i].classList;
+                if (classLinks[i] === "open" && links[i].textContent === "Elzero")
+                    links[i].click;
+                console.log("Iam in 2");
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+    <script src="main.js"></script>
+  </body>
+</html>

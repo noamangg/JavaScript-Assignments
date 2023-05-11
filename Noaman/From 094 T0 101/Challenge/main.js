@@ -10,8 +10,6 @@ let productDiv = document.createElement("div");
 let spanPro = document.createElement("span");
 
 let footer = document.createElement("footer");
-// body.prepend(footer);
-// body.prepend(contentSec);
 
 body.style.cssText = `
 font-family: arial; 
@@ -71,8 +69,6 @@ body.prepend(myHead);
 myHead.prepend(logo);
 myHead.append(menu);
 
-
-
 // Content
 
 contentSec.style.cssText = `
@@ -105,10 +101,10 @@ display: block;
 box-sizing: border-box;
 `;
 
-for(let i = 1; i <= 15; i++){
-    let productCloned = productDiv.cloneNode(true);
-    productCloned.childNodes[0].textContent = `${i}`;
-    contentSec.append(productCloned);
+for (let i = 1; i <= 15; i++) {
+  let productCloned = productDiv.cloneNode(true);
+  productCloned.childNodes[0].textContent = `${i}`;
+  contentSec.append(productCloned);
 }
 
 script.before(contentSec);
@@ -124,6 +120,4 @@ font-size: 1.25rem;
 font-weight: 500;
 `;
 
-
 script.before(footer);
-
