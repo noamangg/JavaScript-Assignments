@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <title>Task 1</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 2;
+        }
+        .boxes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            min-height: 60px;
+            padding: 1rem .25rem;
+        }
+        select {
+            padding: .5rem 1rem;
+            color: inherit;
+            outline: none;
+            font-size: inherit;
+            border-radius: .25rem;
+            font-family: inherit;
+            line-height: inherit;
+        }
+        .box-test {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex: 1
+        }
+        textarea {
+            resize: none;
+            min-width: 400px;
+            width: 70%;
+            min-height: 500px;
+            font-size: inherit;
+            color: inherit;
+            padding: 1rem;
+            border-radius: .25rem;
+            outline: none;
+            font-family: inherit;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="boxes">
+        <select class="font-family-select">
+            <option value="'Cairo', sans-serif">Cairo</option>
+            <option value="'Open Sans', sans-serif">Open Sans</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+        </select>
+
+        <select class="font-color-select">
+            <option value="#cf2e2e">Red</option>
+            <option value="#fcb900">Yellow</option>
+            <option value="#ff6900">Orange</option>
+            <option value="#0693e3">Blue</option>
+            <option value="#00d084">Green</option>
+            <option value="#000000">Black</option>
+        </select>
+
+        <select class="font-size-select">
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+        </select>
+    </div>
+    <div class="box-test">
+    <p>Hello world !</p>
+    <textarea placeholder="Type something to try ...."></textarea>
+</div>
+
+
+    <script>
+        // window.localStorage.clear();
+        let body = document.body
+        let selector = document.querySelectorAll("select");
+        let textArea = document.querySelector("textarea");
+
+        function updateBody() {
+            body.style.fontFamily = window.localStorage.fontFamily;
+            body.style.fontSize = `${window.localStorage.fontSize}px`;
+
+            body.style.color = window.localStorage.fontColor;
+        }
+        function updateSelect() {
+            selector.forEach((select) => {
+                if (select.className === "font-family-select")
+                    select.value = window.localStorage.fontFamily;
+
+                else if (select.className === "font-color-select")
+                    select.value = window.localStorage.fontColor;
+
+                else if (select.className === "font-size-select")
+                    select.value = window.localStorage.fontSize;
+
+            })
+        }
+
+        function checkLocal() {
+            if (window.localStorage.fontSize && window.localStorage.fontFamily && window.localStorage.fontColor) {
+                updateSelect();
+            }
+            else {
+                window.localStorage.fontFamily = "'Cairo', sans-serif";
+                window.localStorage.fontSize = "16"
+                window.localStorage.fontColor = "#cf2e2e"
+            }
+            updateBody();
+        }
+
+        checkLocal();
+        selector.forEach((select) => {
+
+            select.addEventListener("click", function (e) {
+                if (e.target.className === "font-family-select")
+                    window.localStorage.fontFamily = e.target.value;
+
+                else if (e.target.className === "font-color-select")
+                    window.localStorage.fontColor = e.target.value;
+
+                else if (e.target.className === "font-size-select")
+                    window.localStorage.fontSize = e.target.value;
+
+                updateBody();
+
+            })
+        });
+
+
+
+    </script>
+</body>
+
+</html>

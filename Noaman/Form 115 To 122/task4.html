@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+
+
+    <script>
+        const member = {
+            age: 30,
+            working: false,
+            country: "Egypt",
+            hobbies: ["Reading", "Swimming", "Programming"],
+        };
+
+        // Write Your Destructuring Assignment Here
+        let { age: a, working: w, country: c, hobbies: [h1, , h3] } = member
+
+        console.log(`My Age Is ${a} And Iam ${w ? "" : "Not"} Working`);
+        // My Age Is 30 And Iam Not Working
+
+        console.log(`I Live in ${c}`);
+        // I Live in Egypt
+
+        console.log(`My Hobbies: ${h1} And ${h3}`);
+// My Hobbies: Reading And Programming
+    </script>
+</body>
+
+</html>

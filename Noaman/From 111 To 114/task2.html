@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input id="first-name" type="text" placeholder="Enter Your First Name">
+        <input id="last-name" type="text" placeholder="Enter Your Last Name">
+        <input id="email" type="email" placeholder="Enter Your Email">
+        <label for="age-select">Choses Your Age</label>
+        <select id="age-select">
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select>
+    </form>
+
+    <script>
+        let form = document.forms[0];
+
+        let firstName = document.querySelector("#first-name");
+        let lastName = document.querySelector("#last-name");
+        let email = document.querySelector("#email");
+        let ageSelect = document.querySelector("#age-select");
+
+        let inputs = [firstName, lastName, email, ageSelect];
+
+        function checkSession() {
+            if (window.sessionStorage.firstName || window.sessionStorage.lastName || window.sessionStorage.email || window.sessionStorage.ageSelect) {
+                readSession();
+            }
+            else {
+                window.sessionStorage.firstName = "";
+                window.sessionStorage.lastName = "";
+                window.sessionStorage.email = "";
+                window.sessionStorage.ageSelect = "";
+            }
+        }
+
+        function readSession() {
+            firstName.value = sessionStorage.firstName;
+            lastName.value = sessionStorage.lastName;
+            email.value = sessionStorage.email;
+            ageSelect.value = sessionStorage.ageSelect;
+        }
+
+        function updateSession() {
+            sessionStorage.firstName = firstName.value;
+            sessionStorage.lastName = lastName.value;
+            sessionStorage.email = email.value;
+            sessionStorage.ageSelect = ageSelect.value;
+        }
+        checkSession();
+
+
+        inputs.forEach((input) => {
+            input.addEventListener("input", function(e)  {
+                updateSession();
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

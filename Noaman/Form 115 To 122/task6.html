@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+
+
+    <script>
+        function printInfo(theName, theAge, isAvailable, lastSkill) {
+            console.log(`The name is ${theName}`);
+            console.log(`His age is ${theAge}`);
+            if (isAvailable) console.log("His is available");
+            else console.log("He isn't available");
+
+            console.log(`His last skill is ${lastSkill}`);
+        }
+        let chosen = 2;
+
+        let myFriends = [
+            { title: "Osama", age: 38, available: true, skills: ["HTML", "PHP"] },
+            { title: "Noaman", age: 20, available: false, skills: ["HTML", "CSS"] },
+            { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+        ];
+
+        // Osama
+        // 38
+        // IS available
+        // The last skill is php
+
+        if (chosen === 1) {
+            const [
+                {
+                    title: theName,
+                    age: theAge,
+                    available: isAvailable,
+                    skills: [, lastSkill],
+                },
+            ] = myFriends;
+            printInfo(theName, theAge, isAvailable, lastSkill);
+        } else if (chosen === 2) {
+            const [
+                ,
+                {
+                    title: theName,
+                    age: theAge,
+                    available: isAvailable,
+                    skills: [, lastSkill],
+                },
+            ] = myFriends;
+            printInfo(theName, theAge, isAvailable, lastSkill);
+        } else if (chosen === 3) {
+            const [
+                ,
+                ,
+                {
+                    title: theName,
+                    age: theAge,
+                    available: isAvailable,
+                    skills: [, lastSkill],
+                },
+            ] = myFriends;
+            printInfo(theName, theAge, isAvailable, lastSkill);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
