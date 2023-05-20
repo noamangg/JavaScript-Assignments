@@ -23,21 +23,21 @@ JavaScript Assignments
 
 - [x] Week 9
 
-- [ ] Week 10
+- [x] Week 10
+
+- [x] Week 11
+
+- [x] Half Way Is Done
+
+- [x] Week 12
+
+- [x] Week 13
+
+- [x] Week 14
+
+- [x] Week 15
 
 We Are Here 😎
-
-- [ ] Week 11
-
-- [ ] Half Way Is Done
-
-- [ ] Week 12
-
-- [ ] Week 13
-
-- [ ] Week 14
-
-- [ ] Week 15
 
 - [ ] Week 16
 
