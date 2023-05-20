@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+
+    <script>
+        let myInfo = {
+            username: "Osama",
+            role: "Admin",
+            country: "Egypt",
+        };
+
+        let myMap = new Map(Object.entries(myInfo));
+        console.log(myMap);
+        console.log(myMap.size);
+        console.log(myMap.has("role"))
+
+
+        // Needed Output
+        // Map(3) { 'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt' }
+        // 3
+        // true
+    </script>
+</body>
+
+</html>

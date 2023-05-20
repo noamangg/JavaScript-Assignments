@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+
+    <script>
+        let theName = "Elzero";
+        let firstOne = [...theName];
+        let secondOne = Array.from(theName);
+        let thirdOne = theName.split("");
+        let fourthOne = new Array(theName.length);
+        for(let i = 0; i < theName.length; i++) {
+            fourthOne[i] = theName.charAt(i); 
+        }
+        let fifthOne = Array(...theName);
+        console.log(theName);
+        console.log(firstOne);
+        console.log(secondOne);
+        console.log(thirdOne);
+        console.log(fourthOne);
+        console.log(fifthOne);
+
+
+        // Needed Output
+        //['E', 'l', 'z', 'e', 'r', 'o']
+    </script>
+</body>
+
+</html>
