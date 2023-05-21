@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+
+    <script>
+        let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
+        let regex = /\b(Os)\w*O\b/g;
+        console.log(specialNames.match(regex));
+// Output
+// ['Os10O', 'OsO', 'Os100O']
+    </script>
+</body>
+
+</html>

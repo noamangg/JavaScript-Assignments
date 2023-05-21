@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+
+    <script>
+        let url1 = 'elzero.org';
+        let url2 = 'http://elzero.org';
+        let url3 = 'https://elzero.org';
+        let url4 = 'https://www.elzero.org';
+        let url5 = 'https://www.elzero.org:8080/articles.php?id=100&cat=topics';
+
+        let regex = /(https:\/\/|http:\/\/)?(www\.)?\w+\.(org|com)(:\d+\/\w+\.php\?\w+=\d+&\w+=\w+)?/g
+
+        console.log(url1.match(regex));
+        console.log(url2.match(regex));
+        console.log(url3.match(regex));
+        console.log(url4.match(regex));
+        console.log(url5.match(regex));
+    </script>
+</body>
+
+</html>
