@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        let currentDate = new Date();
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        function getMonth(index) {
+            let month = "";
+            switch (index) {
+
+                case 0:
+                    month = 'Jan';
+                    break;
+                case 1:
+                    month = 'Feb';
+                    break;
+                case 2:
+                    month = 'Mar';
+                    break;
+                case 3:
+                    month = 'Apr';
+                    break;
+                case 4:
+                    month = 'May';
+                    break;
+                case 5:
+                    month = 'Jun';
+                    break;
+                case 6:
+                    month = 'Jul';
+                    break;
+                case 7:
+                    month = 'Oug';
+                    break;
+                case 8:
+                    month = 'Sep'
+                    break;
+                case 9:
+                    month = 'Oct'
+                    break;
+                case 10:
+                    month = 'Nov';
+                    break;
+                case 11:
+                    month = 'Dec';
+
+                default:
+                    month = 'Jan';
+            }
+            return month;
+        }
+
+        console.log(currentDate);
+        console.log(`Previous Month Is ${getMonth(currentDate.getMonth())} And Last Day Is ${currentDate.getDay()}`)
+
+        "Sat Apr 30 2022 18:13:20 GMT+0200 (Eastern European Standard Time)"
+        "Previous Month Is April And Last Day Is 30"
+
+    </script>
+</body>
+
+</html>

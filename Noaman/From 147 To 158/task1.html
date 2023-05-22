@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+        // function Car(name, model, price) {
+        //     this.n = name;
+        //     this.m = model;
+        //     this.p = price;
+        // }
+        class Car {
+            constructor(name, model, price) {
+                this.n = name;
+                this.m = model || 2023;
+                this.p = price || 'Undefined';
+            }
+            run() {
+                return "Car Is Running Now"
+            }
+            stop() {
+                return "Car Is Stopped"
+            }
+        }
+
+        let car1 = new Car("Keya", 2022, 230342);
+        let car2 = new Car("Saba", 2019, 430342);
+        let car3 = new Car("Marcidic", 2022, 23342);
+        console.log(car1.run());
+        console.log(`Car One Name Is ${car1.n} And Model Is ${car1.m} And Price Is ${car1.p}`);
+
+        // Needed Output
+
+        "Car One Name Is MG And Model Is 2022 And Price Is 420000"
+        "Car Is Running Now"
+    </script>
+</body>
+
+</html>

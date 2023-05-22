@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <script>
+
+        // let myString = "1234567812345678";
+        // let regex = /\d{4}/g
+        // let fourNumber = myString.match(regex);
+        // console.log(fourNumber);
+        // console.log(fourNumber.join('-'));
+
+
+
+
+        // Edit The Class
+        class User {
+            #c;
+            constructor(username, card) {
+                this.u = username;
+                this.#c = `${(card)}`;
+            }
+            get showData() {
+                this.changeC();
+                return `Hello ${this.u} Your Credit Card Number IS ${this.#c}`
+            };
+
+            changeC() {
+                let regex = /\d{4}/g;
+                let fourNumber = this.#c.match(regex);
+                this.#c = fourNumber.join("-");
+            }
+
+
+        }
+
+        // Do Not Edit Anything Below
+
+        let userOne = new User("Osama", "1234-5678-1234-5678");
+        let userTwo = new User("Ahmed", "1234567812345678");
+        let userThree = new User("Ghareeb", 1234567812345678);
+
+        console.log(userOne.showData);
+        // Hello Osama Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userTwo.showData);
+        // Hello Ahmed Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userThree.showData);
+        // Hello Ghareeb Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userOne.c); // Prevent Accessing To Card Property Here
+        // Undefined
+    </script>
+</body>
+
+</html>

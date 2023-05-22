@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Needed Output
+        let currentDay = new Date();
+        console.log(currentDay);
+        let myBirthDay = new Date(2003, 0, 1);
+        console.log(myBirthDay);
+        let millSeconds = new Date() - myBirthDay;
+        let seconds = millSeconds / 1000;
+        let minutes = seconds / 60;
+        let hour = minutes / 60;
+        let day = hour / 24;
+        let year = day / 365;
+        console.log(Math.floor(seconds));
+        console.log(Math.floor(minutes));
+        console.log(Math.floor(hour));
+        console.log(Math.floor(day));
+        console.log(Math.floor(year));
+
+        "1247939400 Seconds"
+        "20798990 Minutes"
+        "346650 Hours"
+        "14444 Days"
+        "481 Months"
+        "40 Years"
+
+    </script>
+</body>
+
+</html>
